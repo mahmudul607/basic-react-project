@@ -1,16 +1,20 @@
 {
   "files": {
     "main.css": "/basic-react-project/static/css/main.073c9b0a.css",
-    "main.js": "/basic-react-project/static/js/main.39847457.js",
+    "main.js": "/basic-react-project/static/js/main.d9cfe036.js",
     "static/js/787.ed394d0c.chunk.js": "/basic-react-project/static/js/787.ed394d0c.chunk.js",
+    "static/media/apple.png": "/basic-react-project/static/media/apple.9d94dabc8b9688ac9f14.png",
+    "static/media/mango.png": "/basic-react-project/static/media/mango.be62bbe68b709d6552ba.png",
+    "static/media/pineapple.png": "/basic-react-project/static/media/pineapple.fd471c43e9417258129b.png",
+    "static/media/banana.png": "/basic-react-project/static/media/banana.424f9e74fbdaf7803f7c.png",
     "static/media/logo.svg": "/basic-react-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/basic-react-project/index.html",
     "main.073c9b0a.css.map": "/basic-react-project/static/css/main.073c9b0a.css.map",
-    "main.39847457.js.map": "/basic-react-project/static/js/main.39847457.js.map",
+    "main.d9cfe036.js.map": "/basic-react-project/static/js/main.d9cfe036.js.map",
     "787.ed394d0c.chunk.js.map": "/basic-react-project/static/js/787.ed394d0c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.39847457.js"
+    "static/js/main.d9cfe036.js"
   ]
 }
