@@ -6,7 +6,7 @@ var style ={
   fontWeight: 700,
 }
 function App() {
-  var name ="Sadia";
+  var name ="Visitor";
   var bonous =4000;
   var  person1 ={
       firstName:"Hasan",
@@ -18,15 +18,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p style={style}>hello my dear {name}</p>
-
-        <h3 style={{color:'yellow'}}>I am Mahmudul, I realy love you, I don't know what do you think about me but I know you love me but some confusion have in your mind. dear {name} don't worry I'm only for you.</h3>
-        <h2>your name is {person1.firstName +" "+ person1.lastName}</h2>
-        <p>Your Salary is: {person1.Salary+bonous}</p>
+        <p style={style}>Hello my dear {name}</p>
+        <h2>I am {person1.firstName +" "+ person1.lastName}</h2>
+        <p>My Reg No. is: {person1.Salary+bonous}</p>
+        <div style={{display:'flex'}}>
         <Person name={names[0]} job={jobs[0]}></Person>
         <Person name={names[1]} job={jobs[1]}></Person>
         <Person name={names[2]} job={jobs[2]}></Person>
         <Person name={names[3]} job={jobs[3]}></Person>
+        </div>
       </header>
     </div>
   );
@@ -39,12 +39,16 @@ function Person(props){
     border:'2px solid red',
     margin:'10px',
     padding:'10px',
-    boxShadow: "0px 2px 20px 0px green"
+    boxShadow: "0px 2px 20px 0px green",
+    width:'25%',
+    fontSize:'12px',
+    borderRadius:'20px'
   }
   return ( 
     <div  style={personStyle}>
-      <h1 >Student Name: {props.name}</h1>
-      <h3>Department Name: {props.job}</h3>
+      <img style={{width:'100%'}} src={logo} className="App-logo" alt="logo"/>
+      <h1 >Name: {props.name}</h1>
+      <h3>Department: {props.job}</h3>
     </div>
   )
 }
