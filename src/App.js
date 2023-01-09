@@ -4,18 +4,20 @@ import banana from './products/banana.png';
 import apple from './products/apple.png';
 import pineapple from './products/pineapple.png';
 import mango from './products/mango.png';
+import { useState } from 'react';
 var style ={
   color: 'green',
   fontSize: '50px',
   fontWeight: 700,
 }
+
+//main function
 function App() {
   var name ="Visitor";
-  var bonous =4000;
   var  person1 ={
       firstName:"Hasan",
       lastName:"Ali",
-      Salary: 10000,
+      Reg: 10000,
     };
   
   return (
@@ -23,19 +25,21 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p style={style}>Hello my dear {name}</p>
+
+        <Counter></Counter>
+
         <h2>I am {person1.firstName +" "+ person1.lastName}</h2>
-        <p>My Reg No. is: {person1.Salary+bonous}</p>
+        <p>My Reg No. is: {person1.Reg}</p>
+
         <div style={displayStyle}>
-        <Person name={names[0]} job={jobs[0]}></Person>
-        <Person name={names[1]} job={jobs[1]}></Person>
-        <Person name={names[2]} job={jobs[2]}></Person>
-        <Person name={names[3]} job={jobs[3]}></Person>
+        {
+          employes.map(employe => <Person employe = {employe}></Person>)
+        }
         </div>
       <div style={displayStyle}>
-        <Product product={products[0]}></Product>
-        <Product product={products[1]}></Product>
-        <Product product={products[2]}></Product>
-        <Product product={products[3]}></Product>
+        {
+          products.map(product => <Product product ={product}></Product>)
+        }
         
       </div>
        
@@ -43,10 +47,36 @@ function App() {
     </div>
   );
 }
-const jobs= ['Network Engineer', 'Web-developer', 'Software Engineer','System Engineer'];
-const names=['Mahmudul Hasan', 'Hamidul Islam', 'Naimur Rahman', 'Hasinur Rahman'];
+//End main section
+
+//Start state function
+function Counter(){
+  const [count, setCount] = useState(0);
+  const handlerIncrease = () => setCount(count + 1);
+  const handlerDecrease = () => setCount(count - 1);
+  return(
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={handlerIncrease}>Increase</button>
+      <button onClick={handlerDecrease}>Decrease</button>
+    </div>
+  )
+}
+//End state function
+
+//start employes Object with few property
+const employes = [
+  {name:'Mahmudul Hasan', job:'Web Development'},
+  {name:'Hamidul Islam', job:'Network Engineer'},
+  {name:'Naimur Rahman', job:'System Engineer'},
+  {name:'Hasinur Rahman', job:'Software Engineer'},
+  {name:'Obaidullah', job:'Tecnichal Person'}
+]
+//end employes Object with few property
+
+//Start employe Person function
 function Person(props){
-  
+  const {name , job} = props.employe;
   const personStyle = {
     border:'2px solid red',
     margin:'10px',
@@ -59,22 +89,34 @@ function Person(props){
   return ( 
     <div  style={personStyle}>
       <img style={{width:'100%'}} src={logo} className="App-logo" alt="logo"/>
-      <h1 >Name: {props.name}</h1>
-      <h3>Department: {props.job}</h3>
+      <h1 >Name: {name}</h1>
+      <h3>Department: {job}</h3>
     </div>
   )
 }
+
+//End employe Person function
+
+//Style Variables
 const displayStyle = {
   display:'flex',
-  margin:'5px'
+  margin:'5px',
+  width:'100%'
 }
+//Style Variables
+
+//Start Object declaration for product
 const productImages =[apple, mango, banana, pineapple];
 const products = [
   {Name:'Apple', Price:'$7.99', Conditions:'Fresh', image:productImages[0]},
   {Name:'Mango', Price:'$5.99', Conditions:'Fresh', image:productImages[1]},
   {Name:'Banana', Price:'$2.99', Conditions:'Fresh', image:productImages[2]},
   {Name:'Pineapple', Price:'$6.99', Conditions:'Fresh', image:productImages[3]}
+
 ]
+//End Object declaration for product
+
+//Start Product function
 function Product(props){
   const productStyle = {
     border:'2px solid yellow',
@@ -95,5 +137,6 @@ function Product(props){
     </div>
   )
 }
+//End Product function
 
 export default App;
