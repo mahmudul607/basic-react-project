@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/basic-react-project/static/css/main.073c9b0a.css",
-    "main.js": "/basic-react-project/static/js/main.d9cfe036.js",
+    "main.js": "/basic-react-project/static/js/main.82fa795f.js",
     "static/js/787.ed394d0c.chunk.js": "/basic-react-project/static/js/787.ed394d0c.chunk.js",
     "static/media/apple.png": "/basic-react-project/static/media/apple.9d94dabc8b9688ac9f14.png",
     "static/media/mango.png": "/basic-react-project/static/media/mango.be62bbe68b709d6552ba.png",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/basic-react-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/basic-react-project/index.html",
     "main.073c9b0a.css.map": "/basic-react-project/static/css/main.073c9b0a.css.map",
-    "main.d9cfe036.js.map": "/basic-react-project/static/js/main.d9cfe036.js.map",
+    "main.82fa795f.js.map": "/basic-react-project/static/js/main.82fa795f.js.map",
     "787.ed394d0c.chunk.js.map": "/basic-react-project/static/js/787.ed394d0c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d9cfe036.js"
+    "static/js/main.82fa795f.js"
   ]
 }
