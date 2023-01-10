@@ -4,7 +4,7 @@ import banana from './products/banana.png';
 import apple from './products/apple.png';
 import pineapple from './products/pineapple.png';
 import mango from './products/mango.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 var style ={
   color: 'green',
   fontSize: '50px',
@@ -27,7 +27,7 @@ function App() {
         <p style={style}>Hello my dear {name}</p>
 
         <Counter></Counter>
-
+        <Users></Users>
         <h2>I am {person1.firstName +" "+ person1.lastName}</h2>
         <p>My Reg No. is: {person1.Reg}</p>
 
@@ -138,5 +138,26 @@ function Product(props){
   )
 }
 //End Product function
+
+//Start Data Load function
+function Users(){
+  const [users, setUsers] = useState([]);
+  useEffect(() =>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    .then(data => setUsers(data));
+  }, [])
+  return(
+    <div>
+      <h3>Dynamic users: {users.length}</h3>
+      <ul>
+        {
+          users.map(user => <h4> <span style={{textAlign:'left',float:'left'}}>Name: {user.name}</span> <span style={{textAlign:'right', float:'right'}}>Email: {user.email}</span></h4>)
+        }
+      </ul>
+    </div>
+  )
+}
+//End Data Load function
 
 export default App;
